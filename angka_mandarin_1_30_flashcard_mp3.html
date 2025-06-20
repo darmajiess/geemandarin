@@ -1,0 +1,443 @@
+
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <title>Angka Mandarin 1-30 dengan Audio MP3</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f2f2f2;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding: 20px;
+        }
+        .card {
+            width: 120px;
+            height: 160px;
+            margin: 10px;
+            perspective: 1000px;
+            position: relative;
+        }
+        .card-inner {
+            width: 100%;
+            height: 100%;
+            position: relative;
+            transition: transform 0.6s;
+            transform-style: preserve-3d;
+        }
+        .card:hover .card-inner {
+            transform: rotateY(180deg);
+        }
+        .card .front, .card .back {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            border-radius: 10px;
+            backface-visibility: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            font-weight: bold;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
+        .front {
+            background: #ffffff;
+            border: 2px solid #ccc;
+        }
+        .back {
+            background: #ffe680;
+            transform: rotateY(180deg);
+            flex-direction: column;
+            padding: 10px;
+            position: relative;
+        }
+        .hanzi {
+            font-size: 36px;
+            margin-bottom: 5px;
+        }
+        .pinyin {
+            font-size: 18px;
+            color: #333;
+            margin-bottom: 10px;
+        }
+        .speaker {
+            position: absolute;
+            bottom: 10px;
+            right: 10px;
+            background: #fff;
+            border: none;
+            border-radius: 50%;
+            width: 30px;
+            height: 30px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="card">
+        <div class="card-inner">
+            <div class="front">1</div>
+            <div class="back">
+                <div class="hanzi">一</div>
+                <div class="pinyin">yī</div>
+                <button class="speaker" onclick="document.getElementById('audio1').play()">🔊</button>
+                <audio id="audio1" src="1.mp3"></audio>
+            </div>
+        </div>
+    </div>
+    
+    <div class="card">
+        <div class="card-inner">
+            <div class="front">2</div>
+            <div class="back">
+                <div class="hanzi">二</div>
+                <div class="pinyin">èr</div>
+                <button class="speaker" onclick="document.getElementById('audio2').play()">🔊</button>
+                <audio id="audio2" src="2.mp3"></audio>
+            </div>
+        </div>
+    </div>
+    
+    <div class="card">
+        <div class="card-inner">
+            <div class="front">3</div>
+            <div class="back">
+                <div class="hanzi">三</div>
+                <div class="pinyin">sān</div>
+                <button class="speaker" onclick="document.getElementById('audio3').play()">🔊</button>
+                <audio id="audio3" src="3.mp3"></audio>
+            </div>
+        </div>
+    </div>
+    
+    <div class="card">
+        <div class="card-inner">
+            <div class="front">4</div>
+            <div class="back">
+                <div class="hanzi">四</div>
+                <div class="pinyin">sì</div>
+                <button class="speaker" onclick="document.getElementById('audio4').play()">🔊</button>
+                <audio id="audio4" src="4.mp3"></audio>
+            </div>
+        </div>
+    </div>
+    
+    <div class="card">
+        <div class="card-inner">
+            <div class="front">5</div>
+            <div class="back">
+                <div class="hanzi">五</div>
+                <div class="pinyin">wǔ</div>
+                <button class="speaker" onclick="document.getElementById('audio5').play()">🔊</button>
+                <audio id="audio5" src="5.mp3"></audio>
+            </div>
+        </div>
+    </div>
+    
+    <div class="card">
+        <div class="card-inner">
+            <div class="front">6</div>
+            <div class="back">
+                <div class="hanzi">六</div>
+                <div class="pinyin">liù</div>
+                <button class="speaker" onclick="document.getElementById('audio6').play()">🔊</button>
+                <audio id="audio6" src="6.mp3"></audio>
+            </div>
+        </div>
+    </div>
+    
+    <div class="card">
+        <div class="card-inner">
+            <div class="front">7</div>
+            <div class="back">
+                <div class="hanzi">七</div>
+                <div class="pinyin">qī</div>
+                <button class="speaker" onclick="document.getElementById('audio7').play()">🔊</button>
+                <audio id="audio7" src="7.mp3"></audio>
+            </div>
+        </div>
+    </div>
+    
+    <div class="card">
+        <div class="card-inner">
+            <div class="front">8</div>
+            <div class="back">
+                <div class="hanzi">八</div>
+                <div class="pinyin">bā</div>
+                <button class="speaker" onclick="document.getElementById('audio8').play()">🔊</button>
+                <audio id="audio8" src="8.mp3"></audio>
+            </div>
+        </div>
+    </div>
+    
+    <div class="card">
+        <div class="card-inner">
+            <div class="front">9</div>
+            <div class="back">
+                <div class="hanzi">九</div>
+                <div class="pinyin">jiǔ</div>
+                <button class="speaker" onclick="document.getElementById('audio9').play()">🔊</button>
+                <audio id="audio9" src="9.mp3"></audio>
+            </div>
+        </div>
+    </div>
+    
+    <div class="card">
+        <div class="card-inner">
+            <div class="front">10</div>
+            <div class="back">
+                <div class="hanzi">十</div>
+                <div class="pinyin">shí</div>
+                <button class="speaker" onclick="document.getElementById('audio10').play()">🔊</button>
+                <audio id="audio10" src="10.mp3"></audio>
+            </div>
+        </div>
+    </div>
+    
+    <div class="card">
+        <div class="card-inner">
+            <div class="front">11</div>
+            <div class="back">
+                <div class="hanzi">十一</div>
+                <div class="pinyin">shí yī</div>
+                <button class="speaker" onclick="document.getElementById('audio11').play()">🔊</button>
+                <audio id="audio11" src="11.mp3"></audio>
+            </div>
+        </div>
+    </div>
+    
+    <div class="card">
+        <div class="card-inner">
+            <div class="front">12</div>
+            <div class="back">
+                <div class="hanzi">十二</div>
+                <div class="pinyin">shí èr</div>
+                <button class="speaker" onclick="document.getElementById('audio12').play()">🔊</button>
+                <audio id="audio12" src="12.mp3"></audio>
+            </div>
+        </div>
+    </div>
+    
+    <div class="card">
+        <div class="card-inner">
+            <div class="front">13</div>
+            <div class="back">
+                <div class="hanzi">十三</div>
+                <div class="pinyin">shí sān</div>
+                <button class="speaker" onclick="document.getElementById('audio13').play()">🔊</button>
+                <audio id="audio13" src="13.mp3"></audio>
+            </div>
+        </div>
+    </div>
+    
+    <div class="card">
+        <div class="card-inner">
+            <div class="front">14</div>
+            <div class="back">
+                <div class="hanzi">十四</div>
+                <div class="pinyin">shí sì</div>
+                <button class="speaker" onclick="document.getElementById('audio14').play()">🔊</button>
+                <audio id="audio14" src="14.mp3"></audio>
+            </div>
+        </div>
+    </div>
+    
+    <div class="card">
+        <div class="card-inner">
+            <div class="front">15</div>
+            <div class="back">
+                <div class="hanzi">十五</div>
+                <div class="pinyin">shí wǔ</div>
+                <button class="speaker" onclick="document.getElementById('audio15').play()">🔊</button>
+                <audio id="audio15" src="15.mp3"></audio>
+            </div>
+        </div>
+    </div>
+    
+    <div class="card">
+        <div class="card-inner">
+            <div class="front">16</div>
+            <div class="back">
+                <div class="hanzi">十六</div>
+                <div class="pinyin">shí liù</div>
+                <button class="speaker" onclick="document.getElementById('audio16').play()">🔊</button>
+                <audio id="audio16" src="16.mp3"></audio>
+            </div>
+        </div>
+    </div>
+    
+    <div class="card">
+        <div class="card-inner">
+            <div class="front">17</div>
+            <div class="back">
+                <div class="hanzi">十七</div>
+                <div class="pinyin">shí qī</div>
+                <button class="speaker" onclick="document.getElementById('audio17').play()">🔊</button>
+                <audio id="audio17" src="17.mp3"></audio>
+            </div>
+        </div>
+    </div>
+    
+    <div class="card">
+        <div class="card-inner">
+            <div class="front">18</div>
+            <div class="back">
+                <div class="hanzi">十八</div>
+                <div class="pinyin">shí bā</div>
+                <button class="speaker" onclick="document.getElementById('audio18').play()">🔊</button>
+                <audio id="audio18" src="18.mp3"></audio>
+            </div>
+        </div>
+    </div>
+    
+    <div class="card">
+        <div class="card-inner">
+            <div class="front">19</div>
+            <div class="back">
+                <div class="hanzi">十九</div>
+                <div class="pinyin">shí jiǔ</div>
+                <button class="speaker" onclick="document.getElementById('audio19').play()">🔊</button>
+                <audio id="audio19" src="19.mp3"></audio>
+            </div>
+        </div>
+    </div>
+    
+    <div class="card">
+        <div class="card-inner">
+            <div class="front">20</div>
+            <div class="back">
+                <div class="hanzi">二十</div>
+                <div class="pinyin">èr shí</div>
+                <button class="speaker" onclick="document.getElementById('audio20').play()">🔊</button>
+                <audio id="audio20" src="20.mp3"></audio>
+            </div>
+        </div>
+    </div>
+    
+    <div class="card">
+        <div class="card-inner">
+            <div class="front">21</div>
+            <div class="back">
+                <div class="hanzi">二十一</div>
+                <div class="pinyin">èr shí yī</div>
+                <button class="speaker" onclick="document.getElementById('audio21').play()">🔊</button>
+                <audio id="audio21" src="21.mp3"></audio>
+            </div>
+        </div>
+    </div>
+    
+    <div class="card">
+        <div class="card-inner">
+            <div class="front">22</div>
+            <div class="back">
+                <div class="hanzi">二十二</div>
+                <div class="pinyin">èr shí èr</div>
+                <button class="speaker" onclick="document.getElementById('audio22').play()">🔊</button>
+                <audio id="audio22" src="22.mp3"></audio>
+            </div>
+        </div>
+    </div>
+    
+    <div class="card">
+        <div class="card-inner">
+            <div class="front">23</div>
+            <div class="back">
+                <div class="hanzi">二十三</div>
+                <div class="pinyin">èr shí sān</div>
+                <button class="speaker" onclick="document.getElementById('audio23').play()">🔊</button>
+                <audio id="audio23" src="23.mp3"></audio>
+            </div>
+        </div>
+    </div>
+    
+    <div class="card">
+        <div class="card-inner">
+            <div class="front">24</div>
+            <div class="back">
+                <div class="hanzi">二十四</div>
+                <div class="pinyin">èr shí sì</div>
+                <button class="speaker" onclick="document.getElementById('audio24').play()">🔊</button>
+                <audio id="audio24" src="24.mp3"></audio>
+            </div>
+        </div>
+    </div>
+    
+    <div class="card">
+        <div class="card-inner">
+            <div class="front">25</div>
+            <div class="back">
+                <div class="hanzi">二十五</div>
+                <div class="pinyin">èr shí wǔ</div>
+                <button class="speaker" onclick="document.getElementById('audio25').play()">🔊</button>
+                <audio id="audio25" src="25.mp3"></audio>
+            </div>
+        </div>
+    </div>
+    
+    <div class="card">
+        <div class="card-inner">
+            <div class="front">26</div>
+            <div class="back">
+                <div class="hanzi">二十六</div>
+                <div class="pinyin">èr shí liù</div>
+                <button class="speaker" onclick="document.getElementById('audio26').play()">🔊</button>
+                <audio id="audio26" src="26.mp3"></audio>
+            </div>
+        </div>
+    </div>
+    
+    <div class="card">
+        <div class="card-inner">
+            <div class="front">27</div>
+            <div class="back">
+                <div class="hanzi">二十七</div>
+                <div class="pinyin">èr shí qī</div>
+                <button class="speaker" onclick="document.getElementById('audio27').play()">🔊</button>
+                <audio id="audio27" src="27.mp3"></audio>
+            </div>
+        </div>
+    </div>
+    
+    <div class="card">
+        <div class="card-inner">
+            <div class="front">28</div>
+            <div class="back">
+                <div class="hanzi">二十八</div>
+                <div class="pinyin">èr shí bā</div>
+                <button class="speaker" onclick="document.getElementById('audio28').play()">🔊</button>
+                <audio id="audio28" src="28.mp3"></audio>
+            </div>
+        </div>
+    </div>
+    
+    <div class="card">
+        <div class="card-inner">
+            <div class="front">29</div>
+            <div class="back">
+                <div class="hanzi">二十九</div>
+                <div class="pinyin">èr shí jiǔ</div>
+                <button class="speaker" onclick="document.getElementById('audio29').play()">🔊</button>
+                <audio id="audio29" src="29.mp3"></audio>
+            </div>
+        </div>
+    </div>
+    
+    <div class="card">
+        <div class="card-inner">
+            <div class="front">30</div>
+            <div class="back">
+                <div class="hanzi">三十</div>
+                <div class="pinyin">sān shí</div>
+                <button class="speaker" onclick="document.getElementById('audio30').play()">🔊</button>
+                <audio id="audio30" src="30.mp3"></audio>
+            </div>
+        </div>
+    </div>
+    
+</body>
+</html>
